@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+print("BASE_DIR >> ", BASE_DIR , os.path.dirname(os.path.dirname(os.path.abspath(__file__))) )
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--w-h+5&9n8s#&)yod82k5ehmv#-281m$&kpu!4jfo4toyw-$_!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.127.221.42','.weblaren.com']
+ALLOWED_HOSTS = ['13.127.221.42','.weblaren.com', '*']
 
 
 # Application definition
@@ -54,7 +54,8 @@ ROOT_URLCONF = 'weblaren.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'knowledgebase','templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

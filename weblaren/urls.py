@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from knowledgebase import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('/' ,views.AboutView.as_view(),name="about"),
+    path('' ,views.AboutView.as_view(),name="about"),
+    path('stackoverflow' ,views.QuestionView.as_view(),name="question"),
+
 ]
