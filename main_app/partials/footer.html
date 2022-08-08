@@ -1,0 +1,37 @@
+{% include '../base_main_app.html' %}
+    <div class="container "><div class="container-inner"><footer class="footer"><div class="footer-left"><a aria-label="Skillds" class="logo" href="#" style="color: black;font-size: 28px;font-weight: 600;">WebLaren</a>
+	<!--    <p>© Copyright 2020 Skillds<br> All rights reserved.</p>-->
+
+	</div><nav class="footer-right" style="flex:0">
+<!--    <div class="links company company" style="visibility:hidden;"><h5>Company</h5><a href="http://www.skillds.com">Home</a><a href='/about'>About</a><a href='/blogs'>Blogs</a><a style="display: none;" href='about.html#hiring'>Jobs</a><a style="display: none;" href='whats-new.html'>What's New</a><a href='press.html' style="display: none;">Press Room</a></div>-->
+<!--    <div class="links company legal"style="visibility:hidden;"><h5>Legal</h5><a href='legal-notice.html'>Legal Notice</a><a href='privacy-policy.html'>Privacy Policy</a><a href='terms-of-use.html'>Terms of Use</a><a href='dpa.html'>DPA</a><a href='dmca-policy.html'>DMCA Policy</a><a href='erdf.html'>ERDF Support</a></div>-->
+    <div class="links company social-links">
+<!--        <h5>Follow us</h5>-->
+        <div class="buttons-social">
+            <a class="button-social linkedIn" aria-label="Skillds on LinkedIn">
+                <img alt="LinkedIn" src="../../static/images/linkedin.svg">
+            </a>
+            <a class="button-social twitter" aria-label="Skillds on Twitter" >
+                <img alt="Twitter" src="../../static/images/twitter.svg">
+            </a>
+            <a class="button-social facebook" aria-label="Skillds on Facebook" >
+                <img alt="Facebook" src="../../static/images/facebook.svg">
+            </a>
+            <a class="button-social instagram" aria-label="Skillds on Instagram" >
+                <img alt="Instagram" src="../../static/images/instagram.svg">
+            </a></div></div>
+</nav></footer></div></div>
+
+<script type="text/javascript">
+   my_url = window.location.href;
+if(my_url.indexOf("weblaren.com") != -1){
+    var base_url='http://www.weblaren.com/';
+    var server_no = 1
+
+}
+else{
+    var base_url='http://127.0.0.1:8000/';
+    var server_no = 2
+}
+$('.home').attr('href',base_url)
+</script>
